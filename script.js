@@ -34,6 +34,10 @@
     });
   });
 
+  let navBox = document.querySelector("#s_top_wrap");
+  navBox.style.minWidth = "0";
+  navBox.style.width = "0";
+
   let baiduLogo = document.querySelector("#s_lg_img");
   baiduLogo.style.display = "none";
 
