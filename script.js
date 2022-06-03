@@ -13,7 +13,26 @@
   "use strict";
   let submitBtn = document.querySelector("#su");
   submitBtn.value = "浅浅百度下吧";
-  submitBtn.style.width = "133px";
+  submitBtn.style.width = "125px";
+
+  let submitBtnStyle = document.querySelector(".s_btn");
+  submitBtnStyle.style.backgroundColor = "#253446";
+
+  let submitBtnInputStyle = document.querySelector(
+    "#s_kw_wrap input[type='text']"
+  );
+  submitBtnInputStyle.style.border = "2px solid #253446";
+  submitBtnInputStyle.style.borderRadius = "100px 0 0 100px";
+
+  let submitBtnInputStyleOnClick = document.querySelectorAll(
+    "#s_kw_wrap input[type='text']:hover,#s_kw_wrap input[type='text']:focus"
+  );
+  submitBtnInputStyleOnClick.forEach(e => {
+    e.style.border = "2px solid #253446";
+    e.addEventListener("click", () => {
+      e.className = "bg s_ipt_wr new-pmd quickdelete-wrap";
+    });
+  });
 
   let baiduLogo = document.querySelector("#s_lg_img");
   baiduLogo.style.display = "none";
@@ -22,6 +41,4 @@
     "#s-top-left,.s-top-right,.s-bottom-layer-content,#bottom_layer"
   );
   baiduNavBar.forEach(e => (e.style.display = "none"));
-
-  console.log(baiduNavBar);
 })();
