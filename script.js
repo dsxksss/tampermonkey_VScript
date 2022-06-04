@@ -18,11 +18,13 @@
   let submitBtnStyle = document.querySelector(".s_btn");
   submitBtnStyle.style.backgroundColor = "#253446";
 
-  let submitBtnInputStyle = document.querySelector(
-    "#s_kw_wrap input[type='text']"
+  let submitBtnInputStyle = document.querySelectorAll(
+    "#s_kw_wrap input[type='text'],#kw,#s_kw_wrap"
   );
-  submitBtnInputStyle.style.border = "2px solid #253446";
-  submitBtnInputStyle.style.borderRadius = "100px 0 0 100px";
+  submitBtnInputStyle.forEach(e => {
+    e.style.borderRadius = "100px 0 0 100px";
+    e.style.borderColor = "#253446";
+  });
 
   let submitBtnInputStyleOnClick = document.querySelectorAll(
     "#s_kw_wrap input[type='text']:hover,#s_kw_wrap input[type='text']:focus"
