@@ -2,14 +2,13 @@
 // @name         百度美化
 // @namespace    http://ventroar.xyz/
 // @version      0.1
-// @description  try to take over the world!
+// @description  一个很简单的简约美化百度搜索页面的小脚本，因为是大一学生所以知识点不牢固，写这个脚本纯粹锻炼自己技术
 // @author       VentCat
 // @match        https://www.baidu.com/
-// @icon         none
-// @grant        none
+// @license      MIT
 // ==/UserScript==
 
-(function() {
+(function () {
   "use strict";
   let submitBtn = document.querySelector("#su");
   submitBtn.value = "浅浅百度下吧";
@@ -47,4 +46,6 @@
     "#s-top-left,.s-top-right,.s-bottom-layer-content,#bottom_layer"
   );
   baiduNavBar.forEach(e => (e.style.display = "none"));
+  let s_main = document.querySelector("#s_main");
+  s_main.style.display = "none";
 })();
